@@ -15,8 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
               } else {
                 video.target.play();
               }
-            } else {
-              video.target.pause();
+            // } else {
+            //   video.target.pause();
             }
           }
         }
@@ -28,5 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
   );
   for (const video of document.getElementsByTagName("video")) {
     observer.observe(video);
+
   }
+
 });

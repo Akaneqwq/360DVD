@@ -1,15 +1,27 @@
 html {
     font-family: 'Noto Sans', sans-serif;
-    -moz-osx-font-smoothing: grayscale;
+    /* -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     -webkit-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
-    text-size-adjust: 100%;
+    text-size-adjust: 100%; */
 }
 .google-sans {
     font-family: 'Google Sans', sans-serif;
+}
+
+.video {
+    position: relative;
+}
+
+.video > a {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 
 header {
@@ -35,11 +47,9 @@ h1 {
         font-size: 2rem;
     }
 }
-.author-list {
-}
 
 .author {
-    color: #209cee;
+    color: #0D5C91;
 }
 
 .author:hover {
@@ -79,6 +89,15 @@ h1 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 5px;
+}
+
+.video {
+    aspect-ratio: 2 / 1;
+}
+
+
+.top-videos > .video {
+    aspect-ratio: 1 / 1;
 }
 
 @media (max-width: 600px) {
@@ -168,7 +187,7 @@ section > p {
 }
 
 .gallery .full-line a {
-    color: #3273dc;
+    color: #1B54AC;
 }
 
 .gallery .full-line a:hover {
@@ -204,10 +223,10 @@ footer p {
 }
 
 footer a {
-    color: #3273dc;
+    color: #1B54AC;
+    text-decoration: underline;
 }
 
 footer a:hover {
     color: #363636;
 }
-
