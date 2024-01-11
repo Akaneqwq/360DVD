@@ -1,157 +1,82 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>360DVD: Controllable Panorama Video Generation with 360-Degree Video Diffusion Model</title>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>360DVD: Controllable Panorama Video Generation with 360-Degree Video Diffusion Model</title>
+        <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
+        <!-- reset css  -->
+        <link href="./static/css/reset.css" rel="stylesheet" />
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
+        <link href="./static/css/index.css" rel="stylesheet" />
 
-    gtag('js', new Date());
+        <script src="./static/js/index.js" defer></script>
 
-    gtag('config', 'G-PYVRSFMDRL');
-  </script>
-  
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1 class="center google-sans">360DVD: Controllable Panorama Video Generation with 360-Degree Video Diffusion Model</h1>
 
-  <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="stylesheet" href="./static/css/result.css">
-  <link rel="icon" href="./static/images/page.svg">
+            <div class="center google-sans">
+                <a class="author" href="https://akaneqwq.github.io/">Qian Wang</a>,
+                <a class="author" href="https://github.com/lwq20020127/">Weiqi Li</a>,
+                <a class="author" href="https://github.com/MC-E/">Chong Mou</a>,
+                <a class="author" href="https://cxh0519.github.io/">Xinhua Cheng</a>,
+                <a class="author" href="https://jianzhang.tech/">Jian Zhang</a>
+            </div>
 
+            <div class="center google-sans">
+                School of Electronic and Computer Engineering, Shenzhen Graduate School, Peking University
+            </div>
 
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
-
-</head>
-<body>
-
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">360DVD: Controllable Panorama Video Generation with 360-Degree Video Diffusion Model</h1>
-          
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://akaneqwq.github.io/">Qian Wang</a>,
-            </span>
-            <span class="author-block">
-              <a href="https://github.com/lwq20020127/">Weiqi Li</a>,
-            </span>
-            <span class="author-block">
-              <a href="https://github.com/MC-E/">Chong Mou</a>,
-            </span>
-            <span class="author-block">
-              <a href="https://cxh0519.github.io/">Xinhua Cheng</a>,
-            </span>
-            <span class="author-block">
-              <a href="https://jianzhang.tech/">Jian Zhang</a>
-            </span>
-          </div>
-
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">School of Electronic and Computer Engineering, Shenzhen Graduate School, Peking University</span>
-          </div>
-
-          <div class="publication-links">
-            <span class="link-block">
-              <a href=""
-                 class="external-link button is-normal is-rounded is-dark">
-                <span class="icon">
-                    <i class="fas fa-file-pdf"></i>
-                </span>
-                <span>Paper</span>
-              </a>
-            </span>
-
-            <span class="link-block">
-              <a href="./index.html" class="external-link button is-normal is-rounded is-dark">
-                <span class="icon">
-                    <svg class="svg-inline--fa fa-github fa-w-16" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
-                </span>
-                <span>Code</span>
+            <div class="links">
+                <a href="" class="link">
+                    <svg class="link-img" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file-pdf" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M181.9 256.1c-5-16-4.9-46.9-2-46.9 8.4 0 7.6 36.9 2 46.9zm-1.7 47.2c-7.7 20.2-17.3 43.3-28.4 62.7 18.3-7 39-17.2 62.9-21.9-12.7-9.6-24.9-23.4-34.5-40.8zM86.1 428.1c0 .8 13.2-5.4 34.9-40.2-6.7 6.3-29.1 24.5-34.9 40.2zM248 160h136v328c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V24C0 10.7 10.7 0 24 0h200v136c0 13.2 10.8 24 24 24zm-8 171.8c-20-12.2-33.3-29-42.7-53.8 4.5-18.5 11.6-46.6 6.2-64.2-4.7-29.4-42.4-26.5-47.8-6.8-5 18.3-.4 44.1 8.1 77-11.6 27.6-28.7 64.6-40.8 85.8-.1 0-.1.1-.2.1-27.1 13.9-73.6 44.5-54.5 68 5.6 6.9 16 10 21.5 10 17.9 0 35.7-18 61.1-61.8 25.8-8.5 54.1-19.1 79-23.2 21.7 11.8 47.1 19.5 64 19.5 29.2 0 31.2-32 19.7-43.4-13.9-13.6-54.3-9.7-73.6-7.2zM377 105L279 7c-4.5-4.5-10.6-7-17-7h-6v128h128v-6.1c0-6.3-2.5-12.4-7-16.9zm-74.1 255.3c4.1-2.7-2.5-11.9-42.8-9 37.1 15.8 42.8 9 42.8 9z"></path></svg>
+                    Paper
                 </a>
-            </span>
-          </div>
-        </div>
-      </div>
+                <a href="" class="link">
+                    <svg class="link-img" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+                    Code
+                </a>
 
-      <tr>
-        <td style="width: 33%">
-          <video id="replay-video" autoplay loop muted width="33%">
-            <source src="./static/videos/04.mp4"
-                    type="video/mp4">
-          </video>
-        </td>
-        <td style="width: 33%">
-          <video id="replay-video" autoplay loop muted width="33%">
-            <source src="./static/videos/02.mp4"
-                    type="video/mp4">
-          </video>
-        </td>
-        <td style="width: 33%">
-          <video id="replay-video" autoplay loop muted width="33%">
-            <source src="./static/videos/03.mp4"
-                    type="video/mp4">
-          </video>
-        </td>
-      </tr>
-  
-      <tr>
-        <td style="width: 33%">
-          <video id="replay-video" autoplay loop muted width="33%">
-            <source src="./static/videos/01.mp4"
-                    type="video/mp4">
-          </video>
-        </td>
-        <td style="width: 33%">
-          <video id="replay-video" autoplay loop muted width="33%">
-            <source src="./static/videos/05.mp4"
-                    type="video/mp4">
-          </video>
-        </td>
-        <td style="width: 33%">
-          <video id="replay-video" autoplay loop muted width="33%">
-            <source src="./static/videos/06.mp4"
-                    type="video/mp4">
-          </video>
-        </td>
-      </tr>
-  
-    </div>
-  </div>
-</section>
+            </div>
 
-<div class="my-hr">
-  <hr>
-</div>
+            <div class="top-videos">
+                <video playsinline autoplay loop muted>
+                    <source data-src="./static/videos/04.mp4"
+                    type="video/mp4">
+                </video>
+                <video playsinline autoplay loop muted>
+                    <source data-src="./static/videos/02.mp4"
+                    type="video/mp4">
+                </video>
+                <video playsinline autoplay loop muted>
+                    <source data-src="./static/videos/03.mp4"
+                    type="video/mp4">
+                </video>
+                <video playsinline autoplay loop muted>
+                    <source data-src="./static/videos/01.mp4"
+                    type="video/mp4">
+                </video>
+                <video playsinline autoplay loop muted>
+                    <source data-src="./static/videos/05.mp4"
+                    type="video/mp4">
+                </video>
+                <video playsinline autoplay loop muted>
+                    <source data-src="./static/videos/06.mp4"
+                    type="video/mp4">
+                </video>
+            </div>
 
-<section class="section">
-  <div class="container is-max-desktop">
-    
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
+        </header>
+
+        <hr />
+
+        <section>
+            <h2>Abstract</h2>
+            <p class="abstract">
             360-degree panoramic videos recently attract more interest in both studies and applications, courtesy of the heightened immersive experiences they engender. 
             Due to the expensive cost of capturing 360-degree panoramic videos, generating desirable panoramic videos by given prompts is urgently required. 
             Recently, the emerging text-to-video (T2V) diffusion methods demonstrate notable effectiveness in standard video generation. 
@@ -160,424 +85,232 @@
             Concretely, we introduce a lightweight module dubbed 360-Adapter and assisted 360 Enhancement Techniques to transform pre-trained T2V models for 360-degree video generation. 
             We further propose a new panorama dataset named WEB360 consisting of 360-degree video-text pairs for training 360DVD, addressing the absence of captioned panoramic video datasets. 
             Extensive experiments demonstrate the superiority and effectiveness of 360DVD for panorama video generation. 
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <hr>
-
-    <div class="columns is-centered has-text-centered">
-        <div class="column is-full-width">
-          <h2 class="title is-3">Method</h2>
-          <img src="./static/images/framework.png">
-          <br>
-          <br>
-          <div class="content has-text-justified">
-            <p>
-              <b>Overview of 360DVD.</b> 360DVD leverages a trainable 360-Adapter to extend standard T2V models to the panorama domain and is able to generate high-quality panorama videos with given prompts and optional motion conditions.
-              In addition, 360 Enhancement Techniques are proposed for quality improvement in the panorama perspective. 
             </p>
-          </div> 
-          
-        </div>
-      </div>
-    
-    <hr>
+        </section>
 
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Prompt-guided Panorama Video Generation</h2>
-        <table>
-          <tr>
-            <td>
-              <b>AnimateDiff</b>
-            </td>
-            <td>
-              <b>Animatediff + LatentLabs360</b>
-            </td>
-            </td>
-            <td>
-              <b>360DVD</b>
-            </td>
-          </tr>
+        <section>
+            <h2>Method</h2>
+            <img src="./static/images/framework.png">
+            <p>
+            <b>Overview of 360DVD.</b> 360DVD leverages a trainable 360-Adapter to extend standard T2V models to the panorama domain and is able to generate high-quality panorama videos with given prompts and optional motion conditions.
+            In addition, 360 Enhancement Techniques are proposed for quality improvement in the panorama perspective. 
+            </p>
+        </section>
 
-          
-          <tr>
-            <td colspan="3">
-              <span style="font-size: 16px; font-family: Comic Sans MS;font-style: italic;" >a volcano with smoke coming out, mountains under clouds, at sunset</span>
-            </td>
-          </tr>
+        <section>
+            <h2>Prompt-guided Panorama Video Generation</h2>
+            <div style="overflow-x: auto;">
+                <div class="show prompt-guided">
+                    <div class="center">
+                        <b>AnimateDiff</b>
+                    </div>
+                    <div class="center">
+                        <b>Animatediff + LatentLabs360</b>
+                    </div>
+                    <div class="center">
+                        <b>360DVD</b>
+                    </div>
 
-          <tr>
-            <td style="width: 33%">
-              <video id="replay-video" autoplay loop muted width="99%">
-                <source src="./static/videos/comp-volcano-a.mp4"
+                    <div class="full-line center">a volcano with smoke coming out, mountains under clouds, at sunset</div>
+                    <video playsinline autoplay loop muted>
+                        <source data-src="./static/videos/comp-volcano-a.mp4"
                         type="video/mp4">
-              </video>
-            </td>
-            <td style="width: 33%">
-              <video id="replay-video" autoplay loop muted width="99%">
-                <source src="./static/videos/comp-volcano-a-l.mp4"
+                    </video>
+                    <video playsinline autoplay loop muted>
+                        <source data-src="./static/videos/comp-volcano-a-l.mp4"
                         type="video/mp4">
-              </video>
-            </td>
-            <td style="width: 33%">
-              <video id="replay-video" autoplay loop muted width="99%">
-                <source src="./static/videos/comp-volcano-o.mp4"
+                    </video>
+                    <video playsinline autoplay loop muted>
+                        <source data-src="./static/videos/comp-volcano-o.mp4"
                         type="video/mp4">
-              </video>
-            </td>
-          </tr>
+                    </video>
 
-          <tr>
-            <td colspan="3">
-              <span style="font-size: 16px; font-family: Comic Sans MS;font-style: italic;" >a large mountain lake, the lake surrounded by hills and mountains</span>
-            </td>
-          </tr>
-
-          <tr>
-            <td style="width: 33%">
-              <video id="replay-video" autoplay loop muted width="99%">
-                <source src="./static/videos/comp-lake-a.mp4"
+                    <div class="full-line center">a large mountain lake, the lake surrounded by hills and mountains</div>
+                    <video playsinline autoplay loop muted>
+                        <source data-src="./static/videos/comp-lake-a.mp4"
                         type="video/mp4">
-              </video>
-            </td>
-            <td style="width: 33%">
-              <video id="replay-video" autoplay loop muted width="99%">
-                <source src="./static/videos/comp-lake-a-l.mp4"
+                    </video>
+                    <video playsinline autoplay loop muted>
+                        <source data-src="./static/videos/comp-lake-a-l.mp4"
                         type="video/mp4">
-              </video>
-            </td>
-            <td style="width: 33%">
-              <video id="replay-video" autoplay loop muted width="99%">
-                <source src="./static/videos/comp-lake-o.mp4"
+                    </video>
+                    <video playsinline autoplay loop muted>
+                        <source data-src="./static/videos/comp-lake-o.mp4"
                         type="video/mp4">
-              </video>
-            </td>
-          </tr>
-          
-          <tr>
-            <td colspan="3">
-              <span style="font-size: 16px; font-family: Comic Sans MS;font-style: italic;" >the top of a snow covered mountain range, with the sun shining over it</span>
-            </td>
-          </tr>
-          
-          <tr>
-            <td style="width: 33%">
-              <video id="replay-video" autoplay loop muted width="99%">
-                <source src="./static/videos/comp-snow-a.mp4"
+                    </video>
+
+                    <div class="full-line center">the top of a snow covered mountain range, with the sun shining over it</div>
+                    <video playsinline autoplay loop muted>
+                        <source data-src="./static/videos/comp-snow-a.mp4"
                         type="video/mp4">
-              </video>
-            </td>
-            <td style="width: 33%">
-              <video id="replay-video" autoplay loop muted width="99%">
-                <source src="./static/videos/comp-snow-a-l.mp4"
+                    </video>
+                    <video playsinline autoplay loop muted>
+                        <source data-src="./static/videos/comp-snow-a-l.mp4"
                         type="video/mp4">
-              </video>
-            </td>
-            <td style="width: 33%">
-              <video id="replay-video" autoplay loop muted width="99%">
-                <source src="./static/videos/comp-snow-o.mp4"
+                    </video>
+                    <video playsinline autoplay loop muted>
+                        <source data-src="./static/videos/comp-snow-o.mp4"
                         type="video/mp4">
-              </video>
-            </td>
-          </tr>
+                    </video>
 
-          <tr>
-            <td colspan="3">
-              <span style="font-size: 16px; font-family: Comic Sans MS;font-style: italic;" >a green island in the middle of the ocean, filled with stars in the sky</span>
-            </td>
-          </tr>
-
-          <tr>
-            <td style="width: 33%">
-              <video id="replay-video" autoplay loop muted width="99%">
-                <source src="./static/videos/comp-sea-a.mp4"
+                    <div class="full-line center">a green island in the middle of the ocean, filled with stars in the sky</div>
+                    <video playsinline autoplay loop muted>
+                        <source data-src="./static/videos/comp-sea-a.mp4"
                         type="video/mp4">
-              </video>
-            </td>
-            <td style="width: 33%">
-              <video id="replay-video" autoplay loop muted width="99%">
-                <source src="./static/videos/comp-sea-a-l.mp4"
+                    </video>
+                    <video playsinline autoplay loop muted>
+                        <source data-src="./static/videos/comp-sea-a-l.mp4"
                         type="video/mp4">
-              </video>
-            </td>
-            <td style="width: 33%">
-              <video id="replay-video" autoplay loop muted width="99%">
-                <source src="./static/videos/comp-sea-o.mp4"
+                    </video>
+                    <video playsinline autoplay loop muted>
+                        <source data-src="./static/videos/comp-sea-o.mp4"
                         type="video/mp4">
-              </video>
-            </td>
-          </tr>
-                    
-          <tr>
-            <td colspan="3">
-              <span style="font-size: 16px; font-family: Comic Sans MS;font-style: italic;" >a view of fireworks exploding in the night sky over a city, as seen from a plane</span>
-            </td>
-          </tr>
+                    </video>
 
-          <tr>
-            <td style="width: 33%">
-              <video id="replay-video" autoplay loop muted width="99%">
-                <source src="./static/videos/comp-fireworks-a.mp4"
+                    <div class="full-line center">a view of fireworks exploding in the night sky over a city, as seen from a plane</div>
+                    <video playsinline autoplay loop muted>
+                        <source data-src="./static/videos/comp-fireworks-a.mp4"
                         type="video/mp4">
-              </video>
-            </td>
-            <td style="width: 33%">
-              <video id="replay-video" autoplay loop muted width="99%">
-                <source src="./static/videos/comp-fireworks-a-l.mp4"
+                    </video>
+                    <video playsinline autoplay loop muted>
+                        <source data-src="./static/videos/comp-fireworks-a-l.mp4"
                         type="video/mp4">
-              </video>
-            </td>
-            <td style="width: 33%">
-              <video id="replay-video" autoplay loop muted width="99%">
-                <source src="./static/videos/comp-fireworks-o.mp4"
+                    </video>
+                    <video playsinline autoplay loop muted>
+                        <source data-src="./static/videos/comp-fireworks-o.mp4"
                         type="video/mp4">
-              </video>
-            </td>
-          </tr>
+                    </video>
 
-          <tr>
-            <td colspan="3">
-              <span style="font-size: 16px; font-family: Comic Sans MS;font-style: italic;" >a group of hot air balloons flying over a green field under cloudy blue sky</span>
-            </td>
-          </tr>
-
-          <tr>
-            <td style="width: 33%">
-              <video id="replay-video" autoplay loop muted width="99%">
-                <source src="./static/videos/comp-airballoon-a.mp4"
+                    <div class="full-line center">a group of hot air balloons flying over a green field under cloudy blue sky</div>
+                    <video playsinline autoplay loop muted>
+                        <source data-src="./static/videos/comp-airballoon-a.mp4"
                         type="video/mp4">
-              </video>
-            </td>
-            <td style="width: 33%">
-              <video id="replay-video" autoplay loop muted width="99%">
-                <source src="./static/videos/comp-airballoon-a-l.mp4"
+                    </video>
+                    <video playsinline autoplay loop muted>
+                        <source data-src="./static/videos/comp-airballoon-a-l.mp4"
                         type="video/mp4">
-              </video>
-            </td>
-            <td style="width: 33%">
-              <video id="replay-video" autoplay loop muted width="99%">
-                <source src="./static/videos/comp-airballoon-o.mp4"
+                    </video>
+                    <video playsinline autoplay loop muted>
+                        <source data-src="./static/videos/comp-airballoon-o.mp4"
                         type="video/mp4">
-              </video>
-            </td>
-          </tr>
-          
-        </table>
-      </div>
-    </div>
+                    </video>
+                </div>
+            </div>
+        </section>
 
-    <hr>
+        <section>
+            <h2>Motion-guided Panorama Video Generation</h2>
+            <div style="overflow-x: auto;">
+                <div class="show motion-guided">
+                    <div class="center"><b>Source Motion</b></div>
+                    <div class="full-line center"><b>360DVD Results</b></div>
 
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Motion-guided Panorama Video Generation</h2>
-      <table>
-        <tr>
-          <td>
-            <b>Source Motion</b>
-          </td>
-          <td colspan="3">
-            <b>360DVD Results</b>
-          </td>
-        </tr>
+                    <video playsinline autoplay loop muted>
+                        <source data-src="./static/videos/100008_flow.mp4"
+                        type="video/mp4">
+                    </video>
+                    <video playsinline autoplay loop muted>
+                        <source data-src="./static/videos/100008-1.mp4"
+                        type="video/mp4">
+                    </video>
+                    <video playsinline autoplay loop muted>
+                        <source data-src="./static/videos/100008-2.mp4"
+                        type="video/mp4">
+                    </video>
+                    <video playsinline autoplay loop muted>
+                        <source data-src="./static/videos/100008-3.mp4"
+                        type="video/mp4">
+                    </video>
+                    <video playsinline autoplay loop muted>
+                        <source data-src="./static/videos/100541_flow.mp4"
+                        type="video/mp4">
+                    </video>
+                    <video playsinline autoplay loop muted>
+                        <source data-src="./static/videos/100541-1.mp4"
+                        type="video/mp4">
+                    </video>
+                    <video playsinline autoplay loop muted>
+                        <source data-src="./static/videos/100541-2.mp4"
+                        type="video/mp4">
+                    </video>
+                    <video playsinline autoplay loop muted>
+                        <source data-src="./static/videos/100541-3.mp4"
+                        type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
 
-        <tr>
-          <td style="width: 20%">
-            <video id="replay-video" autoplay loop muted width="99%">
-              <source src="./static/videos/100008_flow.mp4"
-                      type="video/mp4">
-            </video>
-          </td>
-          <td style="width: 20%">
-            <video id="replay-video" autoplay loop muted width="99%">
-              <source src="./static/videos/100008-1.mp4"
-                      type="video/mp4">
-            </video>
-          </td>
-          <td style="width: 20%">
-            <video id="replay-video" autoplay loop muted width="99%">
-              <source src="./static/videos/100008-2.mp4"
-                      type="video/mp4">
-            </video>
-          </td>
-          <td style="width: 20%">
-            <video id="replay-video" autoplay loop muted width="99%">
-              <source src="./static/videos/100008-3.mp4"
-                      type="video/mp4">
-            </video>
-          </td>
-        </tr>
+        <section>
+            <h2>Gallery</h2>
+            <div class="show gallery">
+                <div class="full-line center">
+                    Model:
+                    <a href="https://civitai.com/models/30240/toonyou">Toonyou</a>
+                </div>
+                <video playsinline autoplay loop muted>
+                    <source data-src="./static/videos/toon-1.mp4"
+                    type="video/mp4">
+                </video>
+                <video playsinline autoplay loop muted>
+                    <source data-src="./static/videos/toon-2.mp4"
+                    type="video/mp4">
+                </video>
 
-        <tr>
-          <td style="width: 20%">
-            <video id="replay-video" autoplay loop muted width="99%">
-              <source src="./static/videos/100541_flow.mp4"
-                      type="video/mp4">
-            </video>
-          </td>
-          <td style="width: 20%">
-            <video id="replay-video" autoplay loop muted width="99%">
-              <source src="./static/videos/100541-1.mp4"
-                      type="video/mp4">
-            </video>
-          </td>
-          <td style="width: 20%">
-            <video id="replay-video" autoplay loop muted width="99%">
-              <source src="./static/videos/100541-2.mp4"
-                      type="video/mp4">
-            </video>
-          </td>
-          <td style="width: 20%">
-            <video id="replay-video" autoplay loop muted width="99%">
-              <source src="./static/videos/100541-3.mp4"
-                      type="video/mp4">
-            </video>
-          </td>
-          </td>
-        </tr>
+                <div class="full-line center">
+                    Model:
+                    <a href="https://civitai.com/models/66347/rcnz-cartoon-3d">RCNZ Cartoon 3d</a>
+                </div>
+                <video playsinline autoplay loop muted>
+                    <source data-src="./static/videos/rcnz-1.mp4"
+                    type="video/mp4">
+                </video>
+                <video playsinline autoplay loop muted>
+                    <source data-src="./static/videos/rcnz-2.mp4"
+                    type="video/mp4">
+                </video>
 
-      </table>
-      </div>
-    </div>
+                <div class="full-line center">
+                    Model:
+                    <a href="https://civitai.com/models/22922/lyriel">Lyriel</a>
+                </div>
+                <video playsinline autoplay loop muted>
+                    <source data-src="./static/videos/lyriel-1.mp4"
+                    type="video/mp4">
+                </video>
+                <video playsinline autoplay loop muted>
+                    <source data-src="./static/videos/lyriel-2.mp4"
+                    type="video/mp4">
+                </video>
 
-    <hr>
-
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Gallery</h2>
-      <table>
-        <tr>
-          <td colspan="2">
-            <b style="font-size: 20px; font-family: Comic Sans MS;" >
-              Model:
-              <a href="https://civitai.com/models/30240/toonyou">Toonyou</a>
-            </b>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 50%">
-            <video id="replay-video" autoplay loop muted width="99%">
-              <source src="./static/videos/toon-1.mp4"
-                      type="video/mp4">
-            </video>
-          </td>
-          <td style="width: 50%">
-            <video id="replay-video" autoplay loop muted width="99%">
-              <source src="./static/videos/toon-2.mp4"
-                      type="video/mp4">
-            </video>
-          </td>
-        </tr>
-
-        <tr>
-          <td colspan="2">
-            <b style="font-size: 20px; font-family: Comic Sans MS;" >
-              Model:
-              <a href="https://civitai.com/models/66347/rcnz-cartoon-3d">RCNZ Cartoon 3d</a>
-            </b>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 50%">
-            <video id="replay-video" autoplay loop muted width="99%">
-              <source src="./static/videos/rcnz-1.mp4"
-                      type="video/mp4">
-            </video>
-          </td>
-          <td style="width: 50%">
-            <video id="replay-video" autoplay loop muted width="99%">
-              <source src="./static/videos/rcnz-2.mp4"
-                      type="video/mp4">
-            </video>
-          </td>
-        </tr>
-
-        <tr>
-          <td colspan="2">
-            <b style="font-size: 20px; font-family: Comic Sans MS;" >
-              Model:
-              <a href="https://civitai.com/models/22922/lyriel">Lyriel</a>
-            </b>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 50%">
-            <video id="replay-video" autoplay loop muted width="99%">
-              <source src="./static/videos/lyriel-1.mp4"
-                      type="video/mp4">
-            </video>
-          </td>
-          <td style="width: 50%">
-            <video id="replay-video" autoplay loop muted width="99%">
-              <source src="./static/videos/lyriel-2.mp4"
-                      type="video/mp4">
-            </video>
-          </td>
-        </tr>
-
-        <tr>
-          <td colspan="2">
-            <b style="font-size: 20px; font-family: Comic Sans MS;" >
-              Model:
-              <a href="https://civitai.com/models/4201/realistic-vision-v20">Realistic Vision V5.1</a>
-            </b>
-          </td>
-        </tr>
-        <tr>
-          <td style="width: 50%">
-            <video id="replay-video" autoplay loop muted width="99%">
-              <source src="./static/videos/Realistic-1.mp4"
-                      type="video/mp4">
-            </video>
-          </td>
-          <td style="width: 50%">
-            <video id="replay-video" autoplay loop muted width="99%">
-              <source src="./static/videos/Realistic-2.mp4"
-                      type="video/mp4">
-            </video>
-          </td>
-        </tr>
-      </table>
-      </div>
-    </div>
+                <div class="full-line center">
+                    Model:
+                    <a href="https://civitai.com/models/4201/realistic-vision-v20">Realistic Vision V5.1</a>
+                </div>
+                <video playsinline autoplay loop muted>
+                    <source data-src="./static/videos/Realistic-1.mp4"
+                    type="video/mp4">
+                </video>
+                <video playsinline autoplay loop muted>
+                    <source data-src="./static/videos/Realistic-2.mp4"
+                    type="video/mp4">
+                </video>
 
 
-  </div>   
 
-</section>  
+            </div>
+        </section>
 
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>
-    </code></pre>
-  </div>
-</section>
+        <section class="bibtex">
+            <h2 class="title">BibTeX</h2>
+            <pre><code>
+            </code></pre>
+        </section>
 
-<footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <!-- <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a> -->
-      <!-- <a class="icon-link" href="https://github.com/whaohan" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a> -->
-    </div>
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
+        <footer>
+            <p>
             This website is constructed using the templet provided by <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>. Thanks for their effort.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
-</body>
+            </p>
+        </footer>
+    </body>
 </html>
