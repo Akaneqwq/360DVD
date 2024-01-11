@@ -1,15 +1,12 @@
 html {
-    font-family: 'Noto Sans', sans-serif;
-    /* -moz-osx-font-smoothing: grayscale;
+    font-family: sans-serif;
+    -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     -webkit-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
-    text-size-adjust: 100%; */
-}
-.google-sans {
-    font-family: 'Google Sans', sans-serif;
+    text-size-adjust: 100%;
 }
 
 .video {
