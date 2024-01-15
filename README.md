@@ -2,7 +2,7 @@
 <!-- <h1>360DVD</h1> -->
 <h3>360DVD: Controllable Panorama Video Generation with 360-Degree Video Diffusion Model</h3>
 
-[Qian Wang](https://akaneqwq.github.io/), [Weiqi Li](https://github.com/lwq20020127/), [Chong Mou](https://github.com/MC-E/), [Xinhuang Cheng](https://cxh0519.github.io/), [Jian Zhang](https://jianzhang.tech/)
+[Qian Wang](https://akaneqwq.github.io/), [Weiqi Li](https://github.com/lwq20020127/), [Chong Mou](https://github.com/MC-E/), [Xinhua Cheng](https://cxh0519.github.io/), [Jian Zhang](https://jianzhang.tech/)
 
 School of Electronic and Computer Engineering, Peking University
 
