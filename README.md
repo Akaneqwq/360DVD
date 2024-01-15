@@ -2,13 +2,13 @@
 <!-- <h1>360DVD</h1> -->
 <h3>360DVD: Controllable Panorama Video Generation with 360-Degree Video Diffusion Model</h3>
 
-[Qian Wang](https://akaneqwq.github.io/),[Weiqi Li](https://github.com/lwq20020127/), [Chong Mou](https://github.com/MC-E/), [Xinhuang Cheng](https://cxh0519.github.io/), [Jian Zhang](https://jianzhang.tech/)
+[Qian Wang](https://akaneqwq.github.io/), [Weiqi Li](https://github.com/lwq20020127/), [Chong Mou](https://github.com/MC-E/), [Xinhuang Cheng](https://cxh0519.github.io/), [Jian Zhang](https://jianzhang.tech/)
 
 School of Electronic and Computer Engineering, Peking University
 
-<!-- [![arXiv](https://img.shields.io/badge/arXiv-<360DVD>-green.svg)](https://arxiv.org/abs/) -->
-[![Camera Ready Paper](https://img.shields.io/badge/Paper-<360DVD>-red.svg)](https://github.com/akaneqwq/360DVD/blob/main/__assets__/360DVD.pdf)
-[![Home Page](https://img.shields.io/badge/Project-<Gallery>-blue.svg)](https://akaneqwq.github.io/360DVD/)
+[![arXiv](https://img.shields.io/badge/arXiv-2401.06578-b31b1b.svg)](https://arxiv.org/abs/2401.06578)
+[![Camera Ready Paper](https://img.shields.io/badge/Paper-<360DVD>-green.svg)](https://github.com/akaneqwq/360DVD/blob/main/__assets__/360DVD.pdf)
+[![Home Page](https://img.shields.io/badge/Project-<Website>-blue.svg)](https://akaneqwq.github.io/360DVD/)
 <!-- [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-yellow)]() -->
 
 This repository is the official implementation of 360DVD, a panorama video generation pipeline based on the given prompts and motion conditions. The main idea is to turn a T2V model into a panoramic T2V model through 360-Adapter and 360 Enhancement Techniques.
@@ -70,5 +70,10 @@ Codebase built upon [AnimateDiff](https://github.com/guoyww/AnimateDiff).
 
 ## BibTeX
 ```
-
+@article{wang2024360dvd,
+  title={360DVD: Controllable Panorama Video Generation with 360-Degree Video Diffusion Model},
+  author={Qian Wang and Weiqi Li and Chong Mou and Xinhua Cheng and Jian Zhang},
+  journal={arXiv preprint arXiv:2401.06578},
+  year={2024}
+}
 ```
