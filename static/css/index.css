@@ -200,7 +200,14 @@ section > p {
     font-size: 1.75rem;
 }
 
+.bibtex > pre > code {
+    overflow-x: auto;
+    display: block;
+}
+
 pre {
+    display: flex;
+    justify-content: center;
     padding: 1.25rem 1.5rem;
     background-color: #f5f5f5;
     color: #4a4a4a;
