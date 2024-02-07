@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>template</title>
+    <meta charset="utf-8">
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+</head>
+<body>
+<a-scene vr-mode-ui="enabled: false">
+    <a-assets>
+        <video id="my-video" loop muted src=""></video>
+    </a-assets>
+    <a-videosphere src="#my-video"></a-videosphere>
+</a-scene>
+
+<script>
+    function getQueryParam(param) {
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        return urlParams.get(param);
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const video = document.querySelector('#my-video')
+        video.setAttribute('src', getQueryParam("videoSrc"));
+        video.play();
+    });
+</script>
+</body>
+</html>

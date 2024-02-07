@@ -13,6 +13,10 @@ html {
     position: relative;
 }
 
+.video-vr {
+    position: relative;
+}
+
 .video > a {
     position: absolute;
     top: 0;
@@ -92,6 +96,9 @@ h1 {
     aspect-ratio: 2 / 1;
 }
 
+.video-vr {
+    aspect-ratio: 4 / 3;
+}
 
 .top-videos > .video {
     aspect-ratio: 1 / 1;
