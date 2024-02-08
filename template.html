@@ -3,12 +3,12 @@
 <head>
     <title>template</title>
     <meta charset="utf-8">
-    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="static/js/aframe.min.js"></script>
 </head>
 <body>
 <a-scene vr-mode-ui="enabled: false">
     <a-assets>
-        <video id="my-video" loop muted src=""></video>
+        <video id="my-video" playsinline loop muted src=""></video>
     </a-assets>
     <a-videosphere src="#my-video"></a-videosphere>
 </a-scene>

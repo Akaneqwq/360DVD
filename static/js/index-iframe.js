@@ -10,7 +10,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     };
     let observer = new IntersectionObserver(observerCallback, {
-        threshold: 0.2
+        rootMargin:"200px",
+        threshold: 0
     });
     for (const iframe of document.getElementsByTagName("iframe")) {
         observer.observe(iframe);
