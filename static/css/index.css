@@ -264,8 +264,10 @@ footer a:hover {
 
 #vr-root > .close-btn {
     position: fixed;
-    top: 20px;
-    right: 20px;
+    top: 10vh;
+    top: 10dvh;
+    right: 5vw;
+    right: 5dvw;
     cursor: pointer;
 }
 
@@ -299,11 +301,11 @@ footer a:hover {
 }
 
 #toast.showToast {
-    animation: showToast 0.4s linear;
+    animation: showToast 1s linear;
 }
 
 #toast.hideToast {
-    animation: hideToast 0.4s linear;
+    animation: hideToast 1s linear;
     opacity: 0;
 }
 

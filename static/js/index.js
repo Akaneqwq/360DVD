@@ -121,11 +121,11 @@ document.addEventListener("DOMContentLoaded", function () {
     toastElem.innerHTML = text;
 
     toastElem.classList.add("showToast");
-    setTimeout(() => {
-        toastElem.classList.remove("showToast");
-        toastElem.classList.add("hideToast");
-        toastElem.addEventListener("animationend", () => {
-            toastElem.remove();
-        });
-    }, 3000);
+    // setTimeout(() => {
+    //     toastElem.classList.remove("showToast");
+    //     toastElem.classList.add("hideToast");
+    //     toastElem.addEventListener("animationend", () => {
+    //         toastElem.remove();
+    //     });
+    // }, 4000);
 });
