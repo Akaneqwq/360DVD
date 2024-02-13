@@ -81,6 +81,12 @@ document.addEventListener("DOMContentLoaded", function () {
         vrRoot.remove();
     }
 
+    function isWx() {
+        // 通过 ua 判断是否微信
+        const ua = navigator.userAgent;
+        return ua.indexOf("MicroMessenger") !== -1;
+    }
+
     for (const elem of document.querySelectorAll(".video")) {
         try {
             observer.observe(elem.children[0]);
@@ -91,9 +97,9 @@ document.addEventListener("DOMContentLoaded", function () {
             elem.append(openVrElem);
 
             const ua = navigator.userAgent;
-            // 通过 ua 判断是否微信，微信内打开的页面不支持 aframe
-            if (ua.indexOf("MicroMessenger") !== -1) continue;
-            // 非微信场景，点击视频打开全景 vr
+            // 微信内打开的页面不支持 aframe
+            if (isWx()) continue;
+            // 非微信场景，点击视频打开全景预览
             const sourceElem = elem.children[0].children[0];
             const src = sourceElem.dataset.vrsrc || sourceElem.dataset.src;
 
@@ -104,4 +110,22 @@ document.addEventListener("DOMContentLoaded", function () {
             console.error(e);
         }
     }
+
+    // 非微信中，提示可以点击视频打开全景预览
+    const text = isWx()
+        ? "Open in browser for better experience"
+        : "Click any video to open VR preview";
+    const toastElem = document.createElement("div");
+    toastElem.id = "toast";
+    document.body.append(toastElem);
+    toastElem.innerHTML = text;
+
+    toastElem.classList.add("showToast");
+    setTimeout(() => {
+        toastElem.classList.remove("showToast");
+        toastElem.classList.add("hideToast");
+        toastElem.addEventListener("animationend", () => {
+            toastElem.remove();
+        });
+    }, 3000);
 });

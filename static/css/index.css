@@ -267,3 +267,63 @@ footer a:hover {
     right: 20px;
     cursor: pointer;
 }
+
+#toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: auto;
+    border-radius: 40px;
+    min-width: 200px;
+    background: #ffffff;
+    height: 40px;
+    padding: 10px 10px 10px 40px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 20px;
+    box-shadow: 0 0 10px 0 #000000a0;
+    text-wrap: nowrap;
+}
+
+#toast.showToast {
+    animation: showToast 0.4s linear;
+}
+
+#toast.hideToast {
+    animation: hideToast 0.4s linear;
+    opacity: 0;
+}
+
+#toast::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg t='1707819223854' class='icon' viewBox='0 0 1024 1024' version='1.1' xmlns='http://www.w3.org/2000/svg' p-id='4325' id='mx_n_1707819223856' width='20' height='20'%3E%3Cpath d='M512 1024A512 512 0 1 1 512 0a512 512 0 0 1 0 1024zM448 448v384h128V448H448z m0-256v128h128V192H448z' fill='%23000000' p-id='4326'%3E%3C/path%3E%3C/svg%3E");
+    position: absolute;
+    z-index: 1;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+@keyframes showToast {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hideToast {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
