@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A panorama video generation pipeline based on the given prompts and motion conditions.">
+    <meta name="description"
+        content="A panorama video generation pipeline based on the given prompts and motion conditions.">
 
     <title>360DVD: Controllable Panorama Video Generation with 360-Degree Video Diffusion Model</title>
     <link rel="icon" href="./static/images/page.svg">
@@ -15,7 +16,8 @@
     <link href="./static/css/index.css" rel="stylesheet" />
 
     <script src="./static/js/index.js" defer></script>
-    <script src="./static/js/index-iframe.js" defer></script>
+
+    <script src="./static/js/aframe.min.js" defer></script>
 
 </head>
 
@@ -60,22 +62,36 @@
 
         <div class="top-videos">
             <div class="video">
-                <iframe data-src="template.html?videoSrc=./static/videos/01-vr.mp4" title="01-vr"  width="100%" height="100%"></iframe>
+                <video playsinline autoplay loop muted>
+                    <source data-src="./static/videos/01.mp4" data-vrsrc="./static/videos/01-vr.mp4" type="video/mp4">
+                </video>
             </div>
             <div class="video">
-                <iframe data-src="template.html?videoSrc=./static/videos/02-vr.mp4" title="02-vr"  width="100%" height="100%"></iframe>
+                <video playsinline autoplay loop muted>
+                    <source data-src="./static/videos/02.mp4" data-vrsrc="./static/videos/02-vr.mp4" type="video/mp4">
+                </video>
             </div>
             <div class="video">
-                <iframe data-src="template.html?videoSrc=./static/videos/lyriel-1.mp4" title="lyriel-1"  width="100%" height="100%"></iframe>
+                <video playsinline autoplay loop muted>
+                    <source data-src="./static/videos/03.mp4" data-vrsrc="./static/videos/lyriel-1.mp4"
+                        type="video/mp4">
+                </video>
             </div>
             <div class="video">
-                <iframe data-src="template.html?videoSrc=./static/videos/04-vr.mp4" title="04-vr"  width="100%" height="100%"></iframe>
+                <video playsinline autoplay loop muted>
+                    <source data-src="./static/videos/04.mp4" data-vrsrc="./static/videos/04-vr.mp4" type="video/mp4">
+                </video>
             </div>
             <div class="video">
-                <iframe data-src="template.html?videoSrc=./static/videos/05-vr.mp4" title="05-vr"  width="100%" height="100%"></iframe>
+                <video playsinline autoplay loop muted>
+                    <source data-src="./static/videos/05.mp4" data-vrsrc="./static/videos/05-vr.mp4" type="video/mp4">
+                </video>
             </div>
             <div class="video">
-                <iframe data-src="template.html?videoSrc=./static/videos/comp-fireworks-o.mp4" title="comp-fireworks-o"  width="100%" height="100%"></iframe>
+                <video playsinline autoplay loop muted>
+                    <source data-src="./static/videos/06.mp4" data-vrsrc="./static/videos/comp-fireworks-o.mp4"
+                        type="video/mp4">
+                </video>
             </div>
         </div>
 
@@ -134,29 +150,16 @@
                     <video playsinline autoplay loop muted>
                         <source data-src="./static/videos/comp-volcano-a.mp4" type="video/mp4">
                     </video>
-                    <a href="./static/videos/comp-volcano-a.mp4" aria-label="comp-volcano-a"></a>
                 </div>
                 <div class="video">
                     <video playsinline autoplay loop muted>
                         <source data-src="./static/videos/comp-volcano-a-l.mp4" type="video/mp4">
                     </video>
-                    <a href="./static/videos/comp-volcano-a-l.mp4" aria-label="comp-volcano-a-l"></a>
                 </div>
                 <div class="video">
                     <video playsinline autoplay loop muted>
                         <source data-src="./static/videos/comp-volcano-o.mp4" type="video/mp4">
                     </video>
-                    <a href="./static/videos/comp-volcano-o.mp4" aria-label="comp-volcano-o"></a>
-                </div>
-
-                <div class="video-vr">
-                    <iframe data-src="template.html?videoSrc=./static/videos/comp-volcano-a.mp4" title="comp-volcano-a"  width="100%" height="100%"></iframe>
-                </div>
-                <div class="video-vr">
-                    <iframe data-src="template.html?videoSrc=./static/videos/comp-volcano-a-l.mp4" title="comp-volcano-a-l"  width="100%" height="100%"></iframe>
-                </div>
-                <div class="video-vr">
-                    <iframe data-src="template.html?videoSrc=./static/videos/comp-volcano-o.mp4" title="comp-volcano-o"  width="100%" height="100%"></iframe>
                 </div>
 
                 <div class="full-line center">a large mountain lake, the lake surrounded by hills and mountains</div>
@@ -164,30 +167,17 @@
                     <video playsinline autoplay loop muted>
                         <source data-src="./static/videos/comp-lake-a.mp4" type="video/mp4">
                     </video>
-                    <a href="./static/videos/comp-lake-a.mp4" aria-label="comp-lake-a"></a>
                 </div>
                 <div class="video">
                     <video playsinline autoplay loop muted>
                         <source data-src="./static/videos/comp-lake-a-l.mp4" type="video/mp4">
                     </video>
-                    <a href="./static/videos/comp-lake-a-l.mp4" aria-label="comp-lake-a-l"></a>
                 </div>
                 <div class="video">
 
                     <video playsinline autoplay loop muted>
                         <source data-src="./static/videos/comp-lake-o.mp4" type="video/mp4">
-                    </video>
-                    <a href="./static/videos/comp-lake-o.mp4" aria-label="comp-lake-o"></a>
-                </div>
-
-                <div class="video-vr">
-                    <iframe data-src="template.html?videoSrc=./static/videos/comp-lake-a.mp4" title="comp-lake-a"  width="100%" height="100%"></iframe>
-                </div>
-                <div class="video-vr">
-                    <iframe data-src="template.html?videoSrc=./static/videos/comp-lake-a-l.mp4" title="comp-lake-a-l"  width="100%" height="100%"></iframe>
-                </div>
-                <div class="video-vr">
-                    <iframe data-src="template.html?videoSrc=./static/videos/comp-lake-o.mp4" title="comp-lake-o"  width="100%" height="100%"></iframe>
+                        <a href="./static/videos/comp-lake-o.mp4" aria-label="comp-lake-o"></a>
                 </div>
 
                 <div class="full-line center">the top of a snow covered mountain range, with the sun shining over it
@@ -196,29 +186,16 @@
                     <video playsinline autoplay loop muted>
                         <source data-src="./static/videos/comp-snow-a.mp4" type="video/mp4">
                     </video>
-                    <a href="./static/videos/comp-snow-a.mp4" aria-label="comp-snow-a"></a>
                 </div>
                 <div class="video">
                     <video playsinline autoplay loop muted>
                         <source data-src="./static/videos/comp-snow-a-l.mp4" type="video/mp4">
                     </video>
-                    <a href="./static/videos/comp-snow-a-l.mp4" aria-label="comp-snow-a-l"></a>
                 </div>
                 <div class="video">
                     <video playsinline autoplay loop muted>
                         <source data-src="./static/videos/comp-snow-o.mp4" type="video/mp4">
                     </video>
-                    <a href="./static/videos/comp-snow-o.mp4" aria-label="comp-snow-o"></a>
-                </div>
-
-                <div class="video-vr">
-                    <iframe data-src="template.html?videoSrc=./static/videos/comp-snow-a.mp4" title="comp-snow-a"   width="100%" height="100%"></iframe>
-                </div>
-                <div class="video-vr">
-                    <iframe data-src="template.html?videoSrc=./static/videos/comp-snow-a-l.mp4" title="comp-snow-a-l"  width="100%" height="100%"></iframe>
-                </div>
-                <div class="video-vr">
-                    <iframe data-src="template.html?videoSrc=./static/videos/comp-snow-o.mp4" title="comp-snow-o"  width="100%" height="100%"></iframe>
                 </div>
 
                 <div class="full-line center">a green island in the middle of the ocean, filled with stars in the sky
@@ -227,29 +204,16 @@
                     <video playsinline autoplay loop muted>
                         <source data-src="./static/videos/comp-sea-a.mp4" type="video/mp4">
                     </video>
-                    <a href="./static/videos/comp-sea-a.mp4" aria-label="comp-sea-a"></a>
                 </div>
                 <div class="video">
                     <video playsinline autoplay loop muted>
                         <source data-src="./static/videos/comp-sea-a-l.mp4" type="video/mp4">
                     </video>
-                    <a href="./static/videos/comp-sea-a-l.mp4" aria-label="comp-sea-a-l"></a>
                 </div>
                 <div class="video">
                     <video playsinline autoplay loop muted>
                         <source data-src="./static/videos/comp-sea-o.mp4" type="video/mp4">
                     </video>
-                    <a href="./static/videos/comp-sea-o.mp4" aria-label="comp-sea-o"></a>
-                </div>
-
-                <div class="video-vr">
-                    <iframe data-src="template.html?videoSrc=./static/videos/comp-sea-a.mp4" title="comp-sea-a"  width="100%" height="100%"></iframe>
-                </div>
-                <div class="video-vr">
-                    <iframe data-src="template.html?videoSrc=./static/videos/comp-sea-a-l.mp4" title="comp-sea-a-l"  width="100%" height="100%"></iframe>
-                </div>
-                <div class="video-vr">
-                    <iframe data-src="template.html?videoSrc=./static/videos/comp-sea-o.mp4" title="comp-sea-o"  width="100%" height="100%"></iframe>
                 </div>
 
                 <div class="full-line center">a view of fireworks exploding in the night sky over a city, as seen from a
@@ -258,29 +222,16 @@
                     <video playsinline autoplay loop muted>
                         <source data-src="./static/videos/comp-fireworks-a.mp4" type="video/mp4">
                     </video>
-                    <a href="./static/videos/comp-fireworks-a.mp4" aria-label="comp-fireworks-a"></a>
                 </div>
                 <div class="video">
                     <video playsinline autoplay loop muted>
                         <source data-src="./static/videos/comp-fireworks-a-l.mp4" type="video/mp4">
                     </video>
-                    <a href="./static/videos/comp-fireworks-a-l.mp4" aria-label="comp-fireworks-a-l"></a>
                 </div>
                 <div class="video">
                     <video playsinline autoplay loop muted>
                         <source data-src="./static/videos/comp-fireworks-o.mp4" type="video/mp4">
                     </video>
-                    <a href="./static/videos/comp-fireworks-o.mp4" aria-label="comp-fireworks-o"></a>
-                </div>
-
-                <div class="video-vr">
-                    <iframe data-src="template.html?videoSrc=./static/videos/comp-fireworks-a.mp4" title="comp-fireworks-a"  width="100%" height="100%"></iframe>
-                </div>
-                <div class="video-vr">
-                    <iframe data-src="template.html?videoSrc=./static/videos/comp-fireworks-a-l.mp4" title="comp-fireworks-a-l"  width="100%" height="100%"></iframe>
-                </div>
-                <div class="video-vr">
-                    <iframe data-src="template.html?videoSrc=./static/videos/comp-fireworks-o.mp4" title="comp-fireworks-o"  width="100%" height="100%"></iframe>
                 </div>
 
                 <div class="full-line center">a group of hot air balloons flying over a green field under cloudy blue
@@ -289,29 +240,16 @@
                     <video playsinline autoplay loop muted>
                         <source data-src="./static/videos/comp-airballoon-a.mp4" type="video/mp4">
                     </video>
-                    <a href="./static/videos/comp-airballoon-a.mp4" aria-label="comp-airballoon-a"></a>
                 </div>
                 <div class="video">
                     <video playsinline autoplay loop muted>
                         <source data-src="./static/videos/comp-airballoon-a-l.mp4" type="video/mp4">
                     </video>
-                    <a href="./static/videos/comp-airballoon-a-l.mp4" aria-label="comp-airballoon-a-l"></a>
                 </div>
                 <div class="video">
                     <video playsinline autoplay loop muted>
                         <source data-src="./static/videos/comp-airballoon-o.mp4" type="video/mp4">
                     </video>
-                    <a href="./static/videos/comp-airballoon-o.mp4" aria-label="comp-airballoon-o"></a>
-                </div>
-
-                <div class="video-vr">
-                    <iframe data-src="template.html?videoSrc=./static/videos/comp-airballoon-a.mp4" title="comp-airballoon-a"  width="100%" height="100%"></iframe>
-                </div>
-                <div class="video-vr">
-                    <iframe data-src="template.html?videoSrc=./static/videos/comp-airballoon-a-l.mp4" title="comp-airballoon-a-l"  width="100%" height="100%"></iframe>
-                </div>
-                <div class="video-vr">
-                    <iframe data-src="template.html?videoSrc=./static/videos/comp-airballoon-o.mp4" title="comp-airballoon-o"  width="100%" height="100%"></iframe>
                 </div>
             </div>
         </div>
@@ -328,49 +266,41 @@
                     <video playsinline autoplay loop muted>
                         <source data-src="./static/videos/100008_flow.mp4" type="video/mp4">
                     </video>
-                    <a href="./static/videos/100008_flow.mp4" aria-label="100008_flow"></a>
                 </div>
                 <div class="video">
                     <video playsinline autoplay loop muted>
                         <source data-src="./static/videos/100008-1.mp4" type="video/mp4">
                     </video>
-                    <a href="./static/videos/100008-1.mp4" aria-label="100008-1"></a>
                 </div>
                 <div class="video">
                     <video playsinline autoplay loop muted>
                         <source data-src="./static/videos/100008-2.mp4" type="video/mp4">
                     </video>
-                    <a href="./static/videos/100008-2.mp4" aria-label="100008-2"></a>
                 </div>
                 <div class="video">
                     <video playsinline autoplay loop muted>
                         <source data-src="./static/videos/100008-3.mp4" type="video/mp4">
                     </video>
-                    <a href="./static/videos/100008-3.mp4" aria-label="100008-3"></a>
                 </div>
                 <div class="video">
                     <video playsinline autoplay loop muted>
                         <source data-src="./static/videos/100541_flow.mp4" type="video/mp4">
                     </video>
-                    <a href="./static/videos/100541_flow.mp4" aria-label="100541_flow"></a>
                 </div>
                 <div class="video">
                     <video playsinline autoplay loop muted>
                         <source data-src="./static/videos/100541-1.mp4" type="video/mp4">
                     </video>
-                    <a href="./static/videos/100541-1.mp4" aria-label="100541-1"></a>
                 </div>
                 <div class="video">
                     <video playsinline autoplay loop muted>
                         <source data-src="./static/videos/100541-2.mp4" type="video/mp4">
                     </video>
-                    <a href="./static/videos/100541-2.mp4" aria-label="100541-2"></a>
                 </div>
                 <div class="video">
                     <video playsinline autoplay loop muted>
                         <source data-src="./static/videos/100541-3.mp4" type="video/mp4">
                     </video>
-                    <a href="./static/videos/100541-3.mp4" aria-label="100541-3"></a>
                 </div>
             </div>
         </div>
@@ -387,20 +317,11 @@
                 <video playsinline autoplay loop muted>
                     <source data-src="./static/videos/toon-1.mp4" type="video/mp4">
                 </video>
-                <a href="./static/videos/toon-1.mp4" aria-label="toon-1"></a>
             </div>
             <div class="video">
                 <video playsinline autoplay loop muted>
                     <source data-src="./static/videos/toon-2.mp4" type="video/mp4">
                 </video>
-                <a href="./static/videos/toon-2.mp4" aria-label="toon-2"></a>
-            </div>
-
-            <div class="video-vr">
-                <iframe data-src="template.html?videoSrc=./static/videos/toon-1.mp4" title="toon-1"  width="100%" height="100%"></iframe>
-            </div>
-            <div class="video-vr">
-                <iframe data-src="template.html?videoSrc=./static/videos/toon-2.mp4" title="toon-2"  width="100%" height="100%"></iframe>
             </div>
 
             <div class="full-line center">
@@ -411,20 +332,11 @@
                 <video playsinline autoplay loop muted>
                     <source data-src="./static/videos/rcnz-1.mp4" type="video/mp4">
                 </video>
-                <a href="./static/videos/rcnz-1.mp4" aria-label="rcnz-1"></a>
             </div>
             <div class="video">
                 <video playsinline autoplay loop muted>
                     <source data-src="./static/videos/rcnz-2.mp4" type="video/mp4">
                 </video>
-                <a href="./static/videos/rcnz-2.mp4" aria-label="rcnz-2"></a>
-            </div>
-
-            <div class="video-vr">
-                <iframe data-src="template.html?videoSrc=./static/videos/rcnz-1.mp4" title="rcnz-1"  width="100%" height="100%"></iframe>
-            </div>
-            <div class="video-vr">
-                <iframe data-src="template.html?videoSrc=./static/videos/rcnz-2.mp4" title="rcnz-2"  width="100%" height="100%"></iframe>
             </div>
 
             <div class="full-line center">
@@ -435,20 +347,11 @@
                 <video playsinline autoplay loop muted>
                     <source data-src="./static/videos/lyriel-1.mp4" type="video/mp4">
                 </video>
-                <a href="./static/videos/lyriel-1.mp4" aria-label="lyriel-1"></a>
             </div>
             <div class="video">
                 <video playsinline autoplay loop muted>
                     <source data-src="./static/videos/lyriel-2.mp4" type="video/mp4">
                 </video>
-                <a href="./static/videos/lyriel-2.mp4" aria-label="lyriel-2"></a>
-            </div>
-
-            <div class="video-vr">
-                <iframe data-src="template.html?videoSrc=./static/videos/lyriel-1.mp4" title="lyriel-1"  width="100%" height="100%"></iframe>
-            </div>
-            <div class="video-vr">
-                <iframe data-src="template.html?videoSrc=./static/videos/lyriel-2.mp4" title="lyriel-2"  width="100%" height="100%"></iframe>
             </div>
 
             <div class="full-line center">
@@ -459,21 +362,15 @@
                 <video playsinline autoplay loop muted>
                     <source data-src="./static/videos/Realistic-1.mp4" type="video/mp4">
                 </video>
-                <a href="./static/videos/Realistic-1.mp4" aria-label="Realistic-1"></a>
             </div>
             <div class="video">
                 <video playsinline autoplay loop muted>
                     <source data-src="./static/videos/Realistic-2.mp4" type="video/mp4">
                 </video>
-                <a href="./static/videos/Realistic-2.mp4" aria-label="Realistic-2"></a>
             </div>
 
-            <div class="video-vr">
-                <iframe data-src="template.html?videoSrc=./static/videos/Realistic-1.mp4" title="Realistic-1"  width="100%" height="100%"></iframe>
-            </div>
-            <div class="video-vr">
-                <iframe data-src="template.html?videoSrc=./static/videos/Realistic-2.mp4" title="Realistic-2"  width="100%" height="100%"></iframe>
-            </div>
+
+
         </div>
     </section>
 

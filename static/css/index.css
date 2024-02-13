@@ -9,15 +9,18 @@ html {
     text-size-adjust: 100%;
 }
 
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
 .video {
     position: relative;
 }
 
-.video-vr {
-    position: relative;
-}
-
-.video > a {
+.video > .open-vr {
+    cursor: pointer;
     position: absolute;
     top: 0;
     right: 0;
@@ -50,7 +53,7 @@ h1 {
 }
 
 .author {
-    color: #0D5C91;
+    color: #0d5c91;
 }
 
 .author:hover {
@@ -94,10 +97,6 @@ h1 {
 
 .video {
     aspect-ratio: 2 / 1;
-}
-
-.video-vr {
-    aspect-ratio: 4 / 3;
 }
 
 .top-videos > .video {
@@ -191,7 +190,7 @@ section > p {
 }
 
 .gallery .full-line a {
-    color: #1B54AC;
+    color: #1b54ac;
 }
 
 .gallery .full-line a:hover {
@@ -234,10 +233,37 @@ footer p {
 }
 
 footer a {
-    color: #1B54AC;
+    color: #1b54ac;
     text-decoration: underline;
 }
 
 footer a:hover {
     color: #363636;
+}
+
+#vr-root {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000000a0;
+}
+
+#vr-root > .vr-container {
+    aspect-ratio: 4 / 3;
+    width: min(100dvh, 80dvw);
+    position: fixed;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+#vr-root > .close-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
 }
