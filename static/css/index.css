@@ -252,6 +252,7 @@ footer a:hover {
 
 #vr-root > .vr-container {
     aspect-ratio: 4 / 3;
+    width: min(100vh, 80vw);
     width: min(100dvh, 80dvw);
     position: fixed;
     margin: auto;
@@ -270,20 +271,31 @@ footer a:hover {
 
 #toast {
     position: fixed;
-    bottom: 20px;
+    bottom: 20vh;
+    bottom: 20dvh;
     left: 50%;
     transform: translateX(-50%);
     margin: auto;
     border-radius: 40px;
     min-width: 200px;
     background: #ffffff;
-    height: 40px;
+    height: calc(20px + 2rem);
     padding: 10px 10px 10px 40px;
     text-align: center;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1.5rem;
+    line-height: 2rem;
     box-shadow: 0 0 10px 0 #000000a0;
     white-space: nowrap;
+}
+
+@media (max-width: 550px) {
+    #toast {
+        font-size: 16px;
+        line-height: 20px;
+        height: 40px;
+        bottom: 15vh;
+        bottom: 15dvh;
+    }
 }
 
 #toast.showToast {
