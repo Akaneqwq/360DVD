@@ -9,15 +9,18 @@ html {
     text-size-adjust: 100%;
 }
 
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
 .video {
     position: relative;
 }
 
-.video-vr {
-    position: relative;
-}
-
-.video > a {
+.video > .open-vr {
+    cursor: pointer;
     position: absolute;
     top: 0;
     right: 0;
@@ -50,7 +53,7 @@ h1 {
 }
 
 .author {
-    color: #0D5C91;
+    color: #0d5c91;
 }
 
 .author:hover {
@@ -94,10 +97,6 @@ h1 {
 
 .video {
     aspect-ratio: 2 / 1;
-}
-
-.video-vr {
-    aspect-ratio: 4 / 3;
 }
 
 .top-videos > .video {
@@ -191,7 +190,7 @@ section > p {
 }
 
 .gallery .full-line a {
-    color: #1B54AC;
+    color: #1b54ac;
 }
 
 .gallery .full-line a:hover {
@@ -234,10 +233,111 @@ footer p {
 }
 
 footer a {
-    color: #1B54AC;
+    color: #1b54ac;
     text-decoration: underline;
 }
 
 footer a:hover {
     color: #363636;
+}
+
+#vr-root {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000000a0;
+}
+
+#vr-root > .vr-container {
+    aspect-ratio: 4 / 3;
+    width: min(100vh, 80vw);
+    width: min(100dvh, 80dvw);
+    position: fixed;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+#vr-root > .close-btn {
+    position: fixed;
+    top: 10vh;
+    top: 10dvh;
+    right: 5vw;
+    right: 5dvw;
+    cursor: pointer;
+}
+
+#toast {
+    position: fixed;
+    bottom: 20vh;
+    bottom: 20dvh;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: auto;
+    border-radius: 40px;
+    min-width: 200px;
+    background: #ffffff;
+    height: calc(20px + 2rem);
+    padding: 10px 10px 10px 40px;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    box-shadow: 0 0 10px 0 #000000a0;
+    white-space: nowrap;
+}
+
+@media (max-width: 550px) {
+    #toast {
+        font-size: 16px;
+        line-height: 20px;
+        height: 40px;
+        bottom: 15vh;
+        bottom: 15dvh;
+    }
+}
+
+#toast.showToast {
+    animation: showToast 1s linear;
+}
+
+#toast.hideToast {
+    animation: hideToast 1s linear;
+    opacity: 0;
+}
+
+#toast::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg t='1707819223854' class='icon' viewBox='0 0 1024 1024' version='1.1' xmlns='http://www.w3.org/2000/svg' p-id='4325' id='mx_n_1707819223856' width='20' height='20'%3E%3Cpath d='M512 1024A512 512 0 1 1 512 0a512 512 0 0 1 0 1024zM448 448v384h128V448H448z m0-256v128h128V192H448z' fill='%23000000' p-id='4326'%3E%3C/path%3E%3C/svg%3E");
+    position: absolute;
+    z-index: 1;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+@keyframes showToast {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hideToast {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
