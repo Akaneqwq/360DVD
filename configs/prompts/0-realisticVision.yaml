@@ -1,0 +1,23 @@
+RealisticVision:
+  motion_module:
+    - "ckpts/Motion_Module/mm_sd_v14.ckpt"
+  
+  motion_adapter: "ckpts/360Adapter/360Adapter_flow_v1.ckpt"
+
+  dreambooth_path: "ckpts/DreamBooth_LoRA/realisticVisionV51_v20Novae.safetensors"
+
+  seed:           [4, 7, 12099779162349365895, 10499524853910852697]
+  steps:          25
+  guidance_scale: 7.5
+
+  prompt:
+    - "an panoramic view, a volcano with smoke coming out, mountains under clouds, at sunset"
+    - "an panoramic view, a view of fireworks exploding in the night sky over a city, as seen from a plane"
+    - "an aerial view of the top of a snow covered mountain range, with the sun shining over it"
+    - "an panoramic view, a night scene of a green and purple aurora bore over a body of water"
+
+  n_prompt:
+    - "blur, haze, deformed iris, deformed pupils, semi-realistic, cgi, 3d, render, sketch, cartoon, drawing, anime, mutated hands and fingers, deformed, distorted, disfigured, poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, disconnected limbs, mutation, mutated, ugly, disgusting, amputation"
+
+  flow:
+    - "__assets__/example_flows/100541.mp4"

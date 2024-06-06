@@ -1,0 +1,10 @@
+__pycache__/
+datasets/
+ckpts/
+outputs/
+samples/
+wandb/
+*.safetensors
+*.ckpt
+*.pth
+*.zip
