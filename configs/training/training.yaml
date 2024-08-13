@@ -26,7 +26,7 @@ noise_scheduler_kwargs:
   clip_sample:         false
 
 train_data:
-  csv_path:        "datasets/WEB360/WEB360_360TF.csv"
+  csv_path:        "datasets/WEB360/WEB360_360TF_train.csv"
   video_folder:    "datasets/WEB360/videos_512x1024x100"
   flow_folder:     "datasets/WEB360/flows_512x1024x100"
   sample_size:     512
